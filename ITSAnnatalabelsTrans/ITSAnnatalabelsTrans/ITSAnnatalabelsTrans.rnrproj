@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <Configuration>Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <Model>ITSLabelsAnnata</Model>
+    <DBSyncInBuild>False</DBSyncInBuild>
+    <GenerateFormAdaptors>False</GenerateFormAdaptors>
+    <Company>
+    </Company>
+    <Partition>initial</Partition>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <OutputPath>bin</OutputPath>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <DataEntityExpandParentChildRelations>False</DataEntityExpandParentChildRelations>
+    <DataEntityUseLabelTextAsFieldName>False</DataEntityUseLabelTextAsFieldName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ProjectGuid>{ef8583d2-b631-4622-9df0-c5bafcadf2d2}</ProjectGuid>
+    <Name>ITSAnnatalabelsTrans</Name>
+    <RootNamespace>ITSAnnatalabelsTrans</RootNamespace>
+    <StartupObject>getObjectsInfo</StartupObject>
+    <StartupType>Class</StartupType>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="ANA_Extension.es-MX.label.txt">
+      <SubType>Content</SubType>
+      <Name>ANA_Extension.es-MX.label.txt</Name>
+      <DependentUpon>AxLabelFile\ANA_Extension_es-MX</DependentUpon>
+    </Content>
+    <Content Include="AxClass\getObjectsInfo">
+      <SubType>Content</SubType>
+      <Name>getObjectsInfo</Name>
+      <Link>Classes\getObjectsInfo</Link>
+    </Content>
+    <Content Include="AxLabelFile\ANA_Extension_es-MX">
+      <SubType>Content</SubType>
+      <Name>ANA_Extension_es-MX</Name>
+      <Link>ANA_Extension_es-MX</Link>
+    </Content>
+    <Content Include="AxTable\ITSLabelsTb">
+      <SubType>Content</SubType>
+      <Name>ITSLabelsTb</Name>
+      <Link>Tables\ITSLabelsTb</Link>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Classes\" />
+    <Folder Include="Tables\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="TranslatorService, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <Name>TranslatorService</Name>
+      <HintPath>C:\Users\Admin5fb914ca1f\Documents\Visual Studio 2015\Projects\ITSAnnatalabelsTrans\TranslatorService\bin\Debug\TranslatorService.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.Common.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Dynamics\AX\Microsoft.Dynamics.Framework.Tools.BuildTasks.targets" />
+</Project>
